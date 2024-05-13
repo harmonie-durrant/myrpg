@@ -1,0 +1,143 @@
+G_T_MAP:
+	interior_map:
+		sprite:
+			- type: S_FARM_TILEMAP
+			- offset: {16,16}
+			- size: {300, 320}
+		tilemap:
+			- file: Assets/maps/interior.txt
+			- layer: 3
+	interior_features:
+		sprite:
+			- type: S_FARM_FEATURE
+			- offset: {16,16}
+			- size: {304, 508}
+		tilemap:
+			- file: Assets/maps/interior_feature.txt
+			- layer: 4
+	collisions:
+		collision-map:
+			- file: Assets/maps/collision.txt
+	water_barrel:
+		transform:
+		collider:
+			- size: {25,13}
+			- offset: {125, 3456}
+			- static: 1
+	barrel:
+		transform:
+		collider:
+			- size: {22.5,25}
+			- offset: {125, 3585}
+			- static: 1
+	apple_barrel:
+		transform:
+		collider:
+			- size: {22.5,25}
+			- offset: {125, 4150}
+			- static: 1
+	setup:
+		transform:
+		collider:
+			- size: {11,20}
+			- offset: {702, 5568}
+			- static: 1
+	TV:
+		transform:
+		collider:
+			- size: {16,10}
+			- offset: {96, 5988}
+			- static: 1
+	SOFA:
+		transform:
+		collider:
+			- size: {16,6}
+			- offset: {289, 5916}
+			- static: 1
+	TABLE:
+		transform:
+		collider:
+			- size: {48,25}
+			- offset: {480, 5952}
+			- static: 1
+	toilets:
+		transform:
+		collider:
+			- size: {4,8}
+			- offset: {840, 6192}
+			- static: 1
+	toilets:
+		transform:
+		collider:
+			- size: {32,32}
+			- offset: {96, 5568}
+			- static: 1
+	exit-barn:
+		transform:
+		collider:
+			- size: {32,16}
+			- offset: {288,4512}
+			- trigger: change_scene
+			- trigger_val: 2
+			- trigger_vec: {3560, 450}
+	exit-house:
+		transform:
+		collider:
+			- size: {32,16}
+			- offset: {384,6428}
+			- trigger: change_scene
+			- trigger_val: 2
+			- trigger_vec: {2100, 450}
+G_T_PLAYER:
+	Player:
+		tag:
+			- name: Player
+		transform:
+			- position: {300,4260}
+			- rotation: 0
+		sprite:
+			- type: S_CHAR
+			- size: {96,432}
+			- offset: {24,24}
+		animator:
+			- 0: {0, 1}
+			- 1: {1, 1}
+			- 2: {2, 3}
+			- 3: {3, 3}
+			- 4: {4, 1}
+			- 5: {5, 1}
+		stats:
+			- SPD: 6
+		cam-controller:
+		hitbox:
+		collider:
+			- size: {6,9}
+			- offset: {55, 75}
+		controller:
+G_T_NPC:
+	sanders:
+		transform:
+			- position: {1600,850}
+	dummy:
+		transform:
+			- position: {300,300}
+			- rotation: 0
+		sprite:
+			- type: S_PLAYER
+			- size: {192,96}
+			- offset: {24,24}
+ 		stats:
+			- SPD: 6
+		collider:
+			- size: {10,14}
+			- offset: {40, 60}
+			- static: 1
+		dialogue:
+			- type: S_MAYOR
+			- npc-dialogue: Hey !;I'm good and you?;Bye !
+			- player-dialogue: Hi how are you?;I'm fine thanks, bye!
+G_T_UI:
+	music-controller:
+		sound:
+			- file: Assets/InGame.ogg
+			- volume: 10

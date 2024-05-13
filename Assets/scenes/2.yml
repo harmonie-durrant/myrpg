@@ -1,0 +1,111 @@
+G_T_MAP:
+	ground_map:
+		sprite:
+			- type: S_FARM_TILEMAP
+			- offset: {16,16}
+			- size: {300, 320}
+		tilemap:
+			- file: Assets/maps/ground.txt
+			- layer: 1
+	feature_map:
+		sprite:
+			- type: S_FARM_FEATURE
+			- offset: {16,16}
+			- size: {304,508}
+		tilemap:
+			- file: Assets/maps/features.txt
+			- layer: 2
+	coll_map:
+		collision-map:
+			- file: Assets/maps/collision_map.txt
+	enter-barn:
+		transform:
+		collider:
+			- size: {20,3}
+			- offset: {3590,450}
+			- trigger: change_scene
+			- trigger_val: 1
+			- trigger_vec: {300, 4350}
+	enter-house:
+		transform:
+		collider:
+			- size: {13,3}
+			- offset: {2150,445}
+			- trigger: change_scene
+			- trigger_val: 1
+			- trigger_vec: {400, 6250}
+G_T_PLAYER:
+	Player:
+		tag:
+			- name: Player
+		transform:
+			- position: {1000,1000}
+			- rotation: 0
+		sprite:
+			- type: S_CHAR
+			- size: {96,432}
+			- offset: {24,24}
+		animator:
+			- 0: {0, 1}
+			- 1: {1, 1}
+			- 2: {2, 3}
+			- 3: {3, 3}
+			- 4: {4, 1}
+			- 5: {5, 1}
+		stats:
+			- HP: 10
+			- SPD: 6
+		cam-controller:
+		hitbox:
+			- size: {20, 80}
+			- offset: {80, 0}
+		collider:
+			- size: {6,9}
+			- offset: {55, 75}
+		controller:
+	ENEMY1:
+		transform:
+			- position: {700,650}
+			- rotation: 0
+		sprite:
+			- type: S_CHAR
+			- size: {100,432}
+			- offset: {24,24}
+		animator:
+			- 0: {14, 1}
+			- 1: {15, 1}
+			- 2: {16, 1}
+			- 3: {17, 1}
+		stats:
+			- SPD: 6
+			- ATK: 1
+		collider:
+			- size: {6,9}
+			- offset: {55, 75}
+		mob-controller:
+			- radius: 100
+			- offset: {-50, -50}
+			- ai: stand-attack
+	ENEMY2:
+		transform:
+			- position: {2000,2000}
+			- rotation: 0
+		sprite:
+			- type: S_CHAR
+			- size: {100,432}
+			- offset: {24,24}
+		animator:
+			- 0: {14, 1}
+			- 1: {15, 1}
+			- 2: {16, 1}
+			- 3: {17, 1}
+		stats:
+			- SPD: 6
+			- ATK: 1
+		collider:
+			- size: {6,9}
+			- offset: {55, 75}
+		mob-controller:
+			- radius: 100
+			- offset: {-50, -50}
+			- ai: stand-attack

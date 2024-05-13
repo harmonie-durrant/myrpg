@@ -1,0 +1,103 @@
+G_T_UI:
+	music-controller:
+		sound:
+			- file: Assets/MainMenu.ogg
+			- volume: 10
+	background:
+		transform:
+			- position: {0,0}
+			- scale: {1,1}
+			- rotation: 0
+		sprite:
+			- type: S_MAIN_MENU
+			- size: {1920,1080}
+	logo:
+		transform:
+			- position: {118,232}
+			- scale: {1,1}
+		sprite:
+			- type: S_LOGO
+			- size: {525,615}
+	play:
+		tag:
+			- name: play
+		active:
+			- value: 0
+		transform:
+			- position: {1315,308}
+			- scale: {1,1}
+		sprite:
+			- type: S_MENU_BUTTON
+			- size: {4864,108}
+			- offset: {450,108}
+		uibutton:
+			- default: {1080,0}
+			- hover: {1530,0}
+			- pressed: {1982,0}
+			- callback: change_scene
+			- value: 1
+	settings:
+		tag:
+			- name: settings
+		active:
+			- value: 0
+		transform:
+			- position: {1315,486}
+			- scale: {1,1}
+		sprite:
+			- type: S_MENU_BUTTON
+			- size: {4864,108}
+			- offset: {450,108}
+		uibutton:
+			- default: {3514,0}
+			- hover: {3964,0}
+			- pressed: {4414,0}
+			- callback: toggle_settings
+			- value: 1
+	quit:
+		tag:
+			- name: quit
+		active:
+			- value: 0
+		transform:
+			- position: {1360,664}
+			- scale: {1,1}
+		sprite:
+			- type: S_MENU_BUTTON
+			- size: {4864,108}
+			- offset: {360,108}
+		uibutton:
+			- default: {2434,0}
+			- hover: {2794,0}
+			- pressed: {3154,0}
+			- callback: quit
+			- value: 1
+	settings-background:
+		tag:
+			- name: settings_background
+		active:
+			- value: 0
+		transform:
+			- position: {1275,235}
+			- scale: {1,1}
+		sprite:
+			- type: S_SETTINGS_BACK
+			- size: {530,610}
+	back:
+		tag:
+			- name: back
+		active:
+			- value: 0
+		transform:
+			- position: {1360,707}
+			- scale: {1,1}
+		sprite:
+			- type: S_MENU_BUTTON
+			- size: {4864,108}
+			- offset: {360,108}
+		uibutton:
+			- default: {0,0}
+			- hover: {360,0}
+			- pressed: {720,0}
+			- callback: toggle_settings
+			- value: 0

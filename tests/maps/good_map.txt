@@ -1,0 +1,17 @@
+     P               P   WWWWW
+     P               P  WWWWW 
+     P    P     DDDD P WWWW   
+PPPPPPPP  PPPPP D  D P WWW    
+    DDDP  P   P  DDD P WW     
+    DWDP  P D P DD D PWWW     
+WW  DDDP      P      PWWW     
+WWW DDDPPPPPPPPPPPPPPPPPPPP   
+ WWWDDDDP     P      PWW      
+  WWDDDDP DDD P DDDD PWW      
+ WWWDDD P     P DDDD PWW      
+ WWDDDDDP DDD P DDDD PWW      
+WWW DDD P DWD P  WW  PWW      
+WWDDDDDDP DDD P  WW  PWW      
+W  DDDWDP     P      PWWWWW   
+  DD DDDP     P      P WWWWWW 
+ PPPPPPPP     P      P   WWWWW

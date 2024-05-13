@@ -1,0 +1,28 @@
+name: SizeChecker
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+  pull_request:
+    branches:
+      - main
+      - dev
+
+jobs:
+  size-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Check repository size
+        run: |
+          repo_size=$(du -sb | awk '{ print $1 }')
+          repo_size_mb=$((repo_size/1024/1024))
+          echo "Repository size: $repo_size_mb MB"
+          if [ $repo_size_mb -gt 15 ]; then
+            echo "::error::Repository size exceeds 15 MB"
+            exit 1
+          fi

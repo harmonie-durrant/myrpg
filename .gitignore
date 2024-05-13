@@ -1,0 +1,24 @@
+# CMake files
+*.o
+*.a
+
+# Binary files
+my_rpg
+
+# IDE files
+.vscode
+
+# Valgrind files
+vgcore*
+
+# Temporary files
+*.tmp
+*.out
+*.gcda
+*.gcno
+*.gcov
+
+# Coding Style
+coding-style-reports.log
+
+!tests/

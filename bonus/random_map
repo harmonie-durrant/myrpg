@@ -1,0 +1,26 @@
+#! /bin/python3
+
+import sys
+from random import randint
+
+av = sys.argv
+ac = len(av)
+
+def main():
+    map_chars = " #()-={}[],!?."
+    width = int(av[1])
+    height = int(av[2])
+    out = av[3]
+    map = [[0 for i in range(width)] for j in range(height)]
+    print("Printing map with a width of " + str(width) + " and a height of " + str(height))
+    for i in range(0, height):
+        for j in range(0, width):
+            map[i][j] = map_chars[randint(0, len(map_chars) - 1)]
+    with open(out, "w") as f:
+        for i in range(0, height):
+            for j in range(0, width):
+                f.write(map[i][j])
+            f.write("\n")
+    return 0
+
+exit(main())
